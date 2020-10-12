@@ -1,4 +1,5 @@
 # Sprout Therapy Assignment
+![.NET Core](https://github.com/ximura/sprout_assigment/workflows/.NET%20Core/badge.svg)
 
 .Net Core implementation of Sprout Therapy Assignment
 
