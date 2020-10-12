@@ -11,9 +11,12 @@ using Newtonsoft.Json.Converters;
 
 namespace sprout_assigment.Controllers
 {
-    [ApiController]
-    public class ValuesController : ControllerBase
+    public class BaseCalculatorController : ControllerBase
     {
+        public BaseCalculatorController(ICalculator _calculator) : base()
+        {
+            calculator = _calculator;
+        }
         public struct InputArg
         {
             public bool A { get; set; }
@@ -31,15 +34,16 @@ namespace sprout_assigment.Controllers
             public float K { get; set; }
         }
 
-        [HttpPost("/")]
+        [HttpPost()]
         public ActionResult<Result> CalculateResult([FromBody] InputArg content)
         {
             Result result = new Result();
-            ICalculator calculator = new CalculatorBase();
             result.H = calculator.Get_H(content.A, content.B, content.C);
             result.K = calculator.Get_K(result.H, content.D, content.E, content.F);
 
             return result;
         }
+
+        private ICalculator calculator;
     }
 }
