@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "8620ff9f-6f22-46ad-8cdb-fcdb0468832a",
+		"name": "sprout_assigment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "true true false",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b8899898-47f8-413c-9746-4655c7d6986b",
+								"exec": [
+									"pm.test(\"Check response\", function () {\r",
+									"    pm.response.to.be.ok;\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json;\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.h).to.be.a(\"M\");\r",
+									"    pm.expect(jsonData.k).to.be.a(28.86);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json;",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"a\": true, \"b\": true, \"c\": false, \"d\": 22.2, \"e\": 3, \"f\": 2}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/calculator/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"calculator",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "true true true",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "abb69a93-d27c-402e-b5c2-384e153918fd",
+								"exec": [
+									"pm.test(\"Check response\", function () {\r",
+									"    pm.response.to.be.ok;\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json;\r",
+									"    const jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.h).to.be.a(\"p\");\r",
+									"    pm.expect(jsonData.k).to.be.a(23.07059);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json;",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"a\": true, \"b\": true, \"c\": true, \"d\": 22.2, \"e\": 3, \"f\": 2}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/v1/calculator/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"calculator",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -45,7 +45,7 @@ namespace calculator
                 case CalculatorResult.P:
                     return d + (d * (e - f) / 25.5f);
                 case CalculatorResult.T:
-                    return d + (d * f / 30);
+                    return d - (d * f / 30);
             }
 
             throw new ArgumentException(string.Format("result can't be {0}", h));

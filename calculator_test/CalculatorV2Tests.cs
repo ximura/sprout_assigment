@@ -31,7 +31,7 @@ namespace calculator_test
         [TestCase(CalculatorResult.M, 10, 10, 10, 21)]
         [TestCase(CalculatorResult.P, 10, 10, 10, 10)]
         [TestCase(CalculatorResult.P, 25.5f, 2, 1, 26.5f)]
-        [TestCase(CalculatorResult.T, 10, 10, 3, 11)]
+        [TestCase(CalculatorResult.T, 10, 10, 3, 9.0f)]
         public void Get_K(CalculatorResult h, float d, int e, int f, float result)
         {
             Assert.AreEqual(calculator.Get_K(h, d, e, f), result);
