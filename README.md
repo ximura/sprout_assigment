@@ -51,6 +51,6 @@ Web server build on Asp.Net Core
   * BaseCalculatorController - base implementation for calculator controller
   * CalculatorController - api controller that use CalculatorBase. Request example: https://localhost:32768/api/v1/calculator/ 
   * CalculatorV1Controller - api controller that use CalculatorV1. Request example: https://localhost:32768/api/v2/calculator/ 
-  * CalculatorV2ontroller - api controller that use CalculatorV2. Request example: https://localhost:32768/api/v3/calculator/ 
+  * CalculatorV2Сontroller - api controller that use CalculatorV2. Request example: https://localhost:32768/api/v3/calculator/ 
 
 
